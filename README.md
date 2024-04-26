@@ -4,13 +4,13 @@ Very simple signal module I made, similar to a bindable event.
 
 ## Methods
 
-```
+```lua
 Signal.new()
 ```
 Creates a new signal object.
 With that signal object you can do various things, connect it to a function, fire it, and wait until it is fired.
 
-```
+```lua
 local Signal = Signal.new()
 
 local connection = Signal:Connect(function()
@@ -20,7 +20,7 @@ end)
 
 You can fire a signal object too with arguments.
 
-```
+```lua
 local Signal = Signal.new()
 
 local connection = Signal:Connect(function(h)
@@ -44,7 +44,7 @@ Signal:DisconnectAll()
 
 There is also a wait method, yielding the current thread until the Signal object is fired.
 
-```
+```lua
 local Signal = Signal.new()
 
 local connection = Signal:Connect(function(h)
@@ -58,7 +58,7 @@ Signal:Wait()
 Using the :Connect method, you can connect it to a function returning a connection object.
 With this connection object you can Disconnect it.
 
-```
+```lua
 local Signal = Signal.new()
 
 local connection = Signal:Connect(function()
